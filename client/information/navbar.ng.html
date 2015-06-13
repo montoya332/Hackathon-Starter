@@ -1,0 +1,100 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarCtrl">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button ng-show="loginedIn" type="button" class="pull-left navbar-toggle-left" data-toggle="offcanvas" >
+				<span>&nbsp;<i class="fa fa-bars"></i>&nbsp;</span>
+			</button>
+			
+			<a class="navbar-brand" href="/">&nbsp;
+			<img src="img/logo.png" height="39"></a>
+
+			<button type="button" ng-click="loginModal()" ng-show="!loginedIn" class="navbar-toggle collapsed btn-default">
+        		<span color="white">Sign in</span>
+      </button>
+      <button type="button" ng-click="logout()" ng-show="loginedIn" class="navbar-toggle collapsed ">
+        		<span color="white">Sign Out</span>
+      </button>
+		</div>
+		<div class="navbar-form navbar-right hidden-xs " >
+        <button ng-click="loginModal()" class="btn btn-default">Sign in</button>
+      </div>
+</div>
+</nav>
+
+<div id="sidebar-wrapper">
+	<ul class="sidebar-nav">
+		<div class="container-fluid">
+		<br><br><br>
+
+    <div class=" profile">
+		
+			<div class="">
+				<!-- SIDEBAR USER TITLE -->
+				<div ng-show="loginedIn" class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						Arturo Montoya
+					</div>
+					<div class="profile-usertitle-job">
+						Dev. 
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="">
+					<a href="/" type="button" class="btn btn-success btn-sm">Home</a>
+					<a href="/" type="button" class="btn btn-danger btn-sm">Home</a>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class=""><!-- active -->
+							<a href="/">
+							<i class="fa fa-home"></i>
+							Overview </a>
+						</li>
+						<li >
+							<a href="/contact">
+							<i class="fa fa-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		
+	</div>
+</div>
+		</ul>
+	</div>
+
+<!--        Modal for sub-set of Students    Modal for sub-set of Students-->   
+<script type="text/ng-template" id="loginModal.html">
+<div class="modal-header well">
+            <h3 class="modal-title text-center"><button class="btn btn-sm btn-danger pull-left" ng-click="cancel()">x</button> Login</h3>
+        </div>
+
+	<div class="modal-body " >
+		<div class="row">
+    	<div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6" >
+			<div class="form-group">
+	            <input type="text" class="form-control" placeholder="User Name" ng-model="user" />
+	            <br>
+	            <input type="password" class="form-control" placeholder="Password" ng-model="password" />
+	          </div>
+			<div class="wrapper">
+				<span class="group-btn">     
+					<a ng-click="login()" class="btn btn-primary btn-md pull-right">login <i class="fa fa-sign-in"></i></a>
+				</span>
+			</div>
+			</div>
+			</div>
+	</div>
+	<br><br>
+	<div ng-show="loggingIn" class="alert alert-success" role="alert">
+                    <i class="fa fa-spinner fa-spin"></i> &nbsp;Logging In
+                  </div>
+                  <div ng-show="loginErrors" class="alert alert-danger" role="alert">
+                    <i class="fa fa-exclamation-triangle"></i> &nbsp;{{loginErrors}}
+                  </div>
+</script> 
