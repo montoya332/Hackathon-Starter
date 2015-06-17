@@ -15,7 +15,7 @@ angular.module("hackathon-starter").config(['$urlRouterProvider', '$stateProvide
       })
      .state('C2Hackathon', {
         url: '/C2Hackathon',
-        templateUrl: 'client/information/c2HackathonGraph.ng.html',
+        templateUrl: 'client/hackathon/c2HackathonGraph.ng.html',
         controller: 'C2HackathonGraphCtrl'
       })
      .state('landingPage', {
