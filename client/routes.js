@@ -13,6 +13,11 @@ angular.module("hackathon-starter").config(['$urlRouterProvider', '$stateProvide
         templateUrl: 'client/information/home.ng.html',
         //controller: 'UploadsCtrl'
       })
+     .state('C2Hackathon', {
+        url: '/C2Hackathon',
+        templateUrl: 'client/information/c2HackathonGraph.ng.html',
+        controller: 'C2HackathonGraphCtrl'
+      })
      .state('landingPage', {
         url: '/',
         templateUrl: 'client/information/landingPage.ng.html',
