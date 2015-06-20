@@ -6,6 +6,11 @@ Quick start
 
 
 
+Test User:
+email: "test@gmail.com"
+password: "test"
+
+
 Browse collection of Bootstrap themes and templates
 	http://startbootstrap.com
 
