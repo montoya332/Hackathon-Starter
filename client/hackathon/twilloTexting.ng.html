@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-sm-12">
+            <legend>Twillo Texting: </legend>
+        </div>
+        <div class="col-sm-12 col-md-6">
+        <div class="panel panel-primary">
+			  <div class="panel-heading">Received Messages</div>
+			  <div class="panel-body">
+			    <blockquote ng-repeat="note in selectedStudent.notes | orderBy:'$index':reverse  | limitTo:2 ">  <!-- |limitTo:2 -->
+                        <p>{{note.message}}</p>
+                        <small>{{note.dateCreated | date:'MM/dd/yyyy'}} <cite title="Source Title"> Reported : Arturo , Montoya </cite></small>
+                      </blockquote>
+			  </div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6">
+        <div class="panel panel-primary">
+			  <div class="panel-heading">Send Messages</div>
+			  <div class="panel-body">
+			  <br>
+			    <form accept-charset="UTF-8" action="" method="POST"> 
+                            <textarea ng-model="message" class="form-control counted" name="message" placeholder="Type in your message" rows="2" style="margin-bottom:10px;"></textarea>
+                            <span class="help-block pull-right">Max 200 characters</span>
+
+                          </form>
+                          <br><br><button ng-click="sendMessage()" class="btn btn-primary btn-sm pull-right" type="submit">Submit</button>
+			  </div>
+			</div>
+		</div>
+
+  </div>
+</div>
+
+  <!--Modal for imgSelected    Modal for imgSelected    Modal for imgSelected-->
+<script type="text/ng-template" id="infoModalContent.html">
+  <div class="modal-header">
+    <h3 class="modal-title">{{modalHeader}}</h3>
+  </div>
+  <div class="modal-body">
+    {{modalBody}}
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</script>
