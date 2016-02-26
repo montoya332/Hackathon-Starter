@@ -23,6 +23,11 @@ angular.module("hackathon-starter").config(['$urlRouterProvider', '$stateProvide
         templateUrl: 'client/hackathon/photoBooth.ng.html',
         controller: 'PhotoBoothCtrl'
       })
+     .state('d3Example', {
+        url: '/d3Example',
+        templateUrl: 'client/hackathon/d3Example.ng.html',
+        controller: 'D3ExampleCtrl'
+      })
      .state('twilloTexting', {
         url: '/twilloTexting',
         templateUrl: 'client/hackathon/twilloTexting.ng.html',

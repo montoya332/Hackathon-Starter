@@ -1,54 +1,51 @@
 <div class="container-fluid">
-  <div class="row">
+    <div class="row">
         <div class="col-sm-12">
             <legend>Reports for Department: </legend>
         </div>
         <!-- panel preview -->
         <div class="col-sm-3">
-          
+
             <div class="panel panel-default">
                 <div class="panel-body form-horizontal payment-form">
-                   
+
                     <div class="form-group">
                         <label for="status" class="col-sm-3 control-label">Project</label>
                         <div class="col-sm-9">
-                          <select class="form-control" ng-model="selectedProject" ng-options="(project.name) for project in projects">
-                
-              </select>
-                            <!-- <select class="form-control" ng-model="selectedProject" ng-options="(project.name) for project in projects">
-                
-              </select> -->
+                            <select class="form-control" ng-model="selectedProject" ng-options="(project.name) for project in projects">
+
+                            </select>
+
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="status" class="col-sm-3 control-label">Vender</label>
                         <div class="col-sm-9">
                             <select class="form-control" ng-model="selectedVender" ng-options="(vender.name) for vender in venders">
-                
-              </select>
+
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="status" class="col-sm-3 control-label">Building</label>
                         <div class="col-sm-9">
                             <select class="form-control" ng-model="selectedBuilding" ng-options="(building.name) for building in buildings">
-                
-              </select>
+
+                            </select>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="status" class="col-sm-3 control-label">Members</label>
                         <div class="col-sm-9">
                             <select class="form-control" ng-model="selectedMember" ng-options="(member.name) for member in members">
-                
-              </select>
+
+                            </select>
                         </div>
                     </div> 
-                    
-            <div class="row">
-              
-                  
+
+
+
                     <div class="form-group">
                         <div class="col-sm-12 text-right">
                             <button ng-click='trigger()' type="button" class="btn btn-default preview-add-button">
@@ -56,10 +53,10 @@
                             </button>
                         </div>
                     </div>
-                                               
-                
-            </div>
-                    
+
+
+
+
                 </div>
             </div>            
         </div> <!-- / panel preview -->
@@ -67,50 +64,50 @@
             <h4>Preview:</h4>
             <div class="row">
                 <div class="col-xs-8">
-                       
-                    <button ng-click='triggerProject()' type="button" class="btn btn-default preview-add-button">
-                                <span class="glyphicon glyphicon-plus"></span> Projects
-                            </button>
-                            <button ng-click='triggerVender()' type="button" class="btn btn-default preview-add-button">
-                                <span class="glyphicon glyphicon-plus"></span> Venders
-                            </button>
-                            <button ng-click='triggerBuilding()' type="button" class="btn btn-default preview-add-button">
-                                <span class="glyphicon glyphicon-plus"></span> Building
-                            </button>
-                            <button ng-click='triggerMember()' type="button" class="btn btn-default preview-add-button">
-                                <span class="glyphicon glyphicon-plus"></span> Members
-                            </button>                        
-                </div>
-      
-                <div class="col-xs-4">
-                    
-                    <div class="row">
-                      <h6>Budget: <strong><span class="preview-total"></span></strong></h6>
-                    <div >
-                      <h4>
-                      ${{300+amount}}
-                         </h4>                  
-                    </div>
-                  </div>
-                    <div class="row">
-                                        <h6>Spent: <strong><span class="preview-total"></span></strong></h6>
 
-                    <div >
-                      <h4>
-                      ${{amount}}
-                         </h4>                  
+                    <button ng-click='triggerProject()' type="button" class="btn btn-default preview-add-button">
+                        <span class="glyphicon glyphicon-plus"></span> Projects
+                    </button>
+                    <button ng-click='triggerVender()' type="button" class="btn btn-default preview-add-button">
+                        <span class="glyphicon glyphicon-plus"></span> Venders
+                    </button>
+                    <button ng-click='triggerBuilding()' type="button" class="btn btn-default preview-add-button">
+                        <span class="glyphicon glyphicon-plus"></span> Building
+                    </button>
+                    <button ng-click='triggerMember()' type="button" class="btn btn-default preview-add-button">
+                        <span class="glyphicon glyphicon-plus"></span> Members
+                    </button>                        
+                </div>
+
+                <div class="col-xs-4">
+
+                    <div class="row">
+                        <h6>Budget: <strong><span class="preview-total"></span></strong></h6>
+                        <div >
+                            <h4>
+                                ${{300+amount}}
+                            </h4>                  
+                        </div>
                     </div>
-                  </div>
+                    <div class="row">
+                        <h6>Spent: <strong><span class="preview-total"></span></strong></h6>
+
+                        <div >
+                            <h4>
+                                ${{amount}}
+                            </h4>                  
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                  <hr style="border:1px dashed #dddddd;">
+                    <hr style="border:1px dashed #dddddd;">
 
 
                     <div class="hc-pie" items="limitedIdeas"></div>
                 </div>                
             </div>
         </div>
-  </div>
+    </div>
 </div>
