@@ -1,5 +1,5 @@
-angular.module("hackathon-starter").controller("NavbarCtrl", ['$scope', '$meteor', '$stateParams', '$collection', '$location', '$modal', '$http',
-  function($scope, $meteor, $stateParams, $collection, $location, $modal, $http){
+angular.module("hackathon-starter").controller("NavbarCtrl", ['$scope', '$meteor' , '$location', '$modal', 
+  function($scope, $meteor,  $location, $modal ){
     $meteor.autorun( $scope,function ( subscriptionHandle ) {
       if( Meteor.user() ){
         $scope.loginedIn = true;
@@ -30,7 +30,7 @@ angular.module("hackathon-starter").controller("NavbarCtrl", ['$scope', '$meteor
       console.log('Clicked');
       modalInstance.result.then(function ( callback ) {
       }, function () {
-        console.log( 'Modal dismissed at: ' , moment().format('h:mm a'));
+        //console.log( 'Modal dismissed at: ' , moment().format('h:mm a'));
       });
 
     }
