@@ -1,5 +1,5 @@
 angular.module("hackathon-starter").controller("NavbarCtrl", ['$scope', '$meteor' , '$location', '$modal', 
-  function($scope, $meteor,  $location, $modal ){
+  function($scope, $meteor,  $location, $modal ) {
     $meteor.autorun( $scope,function ( subscriptionHandle ) {
       if( Meteor.user() ){
         $scope.loginedIn = true;
@@ -10,6 +10,11 @@ angular.module("hackathon-starter").controller("NavbarCtrl", ['$scope', '$meteor
         /* $location.path('/checkin'); */
       }
     });
+    $scope.takePicture = function(){
+        $meteor.getPicture().then(function(data){
+          $scope.party.imageData = data;
+        });
+      };
     $scope.textInfo = function () {}
     $scope.logout = function () {
       console.log('logged Out'); 

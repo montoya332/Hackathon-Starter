@@ -1,5 +1,5 @@
-angular.module("hackathon-starter").controller("C2HackathonGraphCtrl", ['$scope', '$meteor', '$stateParams', '$collection', '$location', '$http','limitToFilter',
-  function($scope, $meteor, $stateParams, $collection, $location, $http,limitToFilter){
+angular.module("hackathon-starter").controller("C2HackathonGraphCtrl", ['$scope', '$meteor', '$location', '$http','limitToFilter',
+  function($scope, $meteor, $location, $http,limitToFilter){
 
     document.title = "C2 Hackathon Page";
     console.log("C2 Hackathon");

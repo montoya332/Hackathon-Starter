@@ -18,6 +18,11 @@ angular.module("hackathon-starter").config(['$urlRouterProvider', '$stateProvide
         templateUrl: 'client/hackathon/c2HackathonGraph.ng.html',
         controller: 'C2HackathonGraphCtrl'
       })
+     .state('photoBooth', {
+        url: '/photoBooth',
+        templateUrl: 'client/hackathon/photoBooth.ng.html',
+        controller: 'PhotoBoothCtrl'
+      })
      .state('twilloTexting', {
         url: '/twilloTexting',
         templateUrl: 'client/hackathon/twilloTexting.ng.html',
