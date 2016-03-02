@@ -8,7 +8,6 @@ autopublish
 insecure
 angularui:angular-ui-router
 momentjs:moment
-natestrauser:font-awesome
 selchenkov:angular-bootstrap-ui
 dotansimha:angular-google-chart
 accounts-ui
@@ -33,3 +32,4 @@ check
 angular
 mdg:camera
 d3js:d3
+fortawesome:fontawesome

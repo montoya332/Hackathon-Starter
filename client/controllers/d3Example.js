@@ -118,7 +118,7 @@ angular.module("hackathon-starter").controller("D3ExampleCtrl", ['$scope', '$met
             }
         };
     }
-]).directive('crD3FluidBlob', [
+]).directive('crD3FluidPolygon', [
 
     
     function() {
